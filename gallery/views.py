@@ -2,5 +2,7 @@ from django.shortcuts import render
 from django.http  import HttpResponse
 
 # Create your views here.
-def welcome(request):
-    return render(request, 'index.html')
+def images(request):
+    pictures = Image.objects.all()
+    location = Location.objects.all()
+    return render(request, 'index.html', {'pictures':pictures, 'location':location})
