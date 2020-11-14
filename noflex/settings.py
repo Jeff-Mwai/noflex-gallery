@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap3',
     'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -64,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -78,7 +80,7 @@ WSGI_APPLICATION = 'noflex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
+        'NAME': 'gallery2',
         'USER': 'moringa',
         'PASSWORD':'KingJeffa00*',
     }
