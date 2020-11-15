@@ -3,33 +3,37 @@
 {{ block.super}}
 
 <div class="container">
+  <div class="display">
+    {% for location in location %}
+    <a class="button" id="btn" href="/location/{{location.name}}">{{location.name}}</a>
 
-  <!-- Looping through news   -->
+    {% endfor %}
+    <!-- <div class="row">
+      {% for item in pictures %}
+      <div class="col"></div>
 
-  {% for location in location %}
-  <a class="button" id="btn" href="/location/{{location.name}}">{{location.name}}</a>
-
-  {% endfor %}
-  {% for item in pictures %}
-
-  <div class="row">
-    <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <h2 class="text-center"> {{ item.image_name }} </h2>
     </div>
-
-    <!--Display news Article images  -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{item.image.url}}" class="img-responsive" alt="Image">
-    </div>
+    <img src="{{item.image.url}}" class="img-responsive" height="350px" width="400px" alt="Image">
   </div>
+</div>
 
-  {% empty %}
-  <div class="row">
-    <h2 class="text-center">There are no pictures</h2>
+{% empty %}
+<div class="row">
+  <h2 class="text-center">There are no pictures</h2>
+</div>
+{% endfor %} -->
+<div class="col-4">
+
+  {% for item in pictures %}
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{item.image.url}}" alt="Card image cap" class="img-fluid">
   </div>
   {% endfor %}
 
 </div>
+
+</div>
+
 
 {% endblock %}
