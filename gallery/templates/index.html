@@ -5,6 +5,11 @@
 <div class="container">
 
   <!-- Looping through news   -->
+
+  {% for location in location %}
+  <a class="button" id="btn" href="/location/{{location.name}}">{{location.name}}</a>
+
+  {% endfor %}
   {% for item in pictures %}
 
   <div class="row">
