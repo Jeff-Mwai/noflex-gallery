@@ -25,7 +25,7 @@
 
 <body>
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="display p-5">
       {% for location in location %}
       <a class="button p-3" id="btn" href="/location/{{location.name}}">{{location.name}}</a>
@@ -33,7 +33,7 @@
       {% endfor %}
 
     </div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         {% for item in pictures %}
         <div class="col-md-3">
