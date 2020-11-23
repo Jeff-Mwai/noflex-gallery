@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+
 import os
 import django_heroku
 import dj_database_url
@@ -175,8 +177,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
 
+# cloudinary.config( 
+#     cloud_name=config('cloud_name'),
+#     api_key=config('api_key'),
+#     api_secret=config('api_secret') dpzieo3br 635949311695115 9AEbYrcVSayVhRKl5qSGGmZ2I2I
+
+# )
 cloudinary.config( 
-  cloud_name = "dpzieo3br", 
-  api_key = "635949311695115", 
-  api_secret = "Rq9lVViYC7C9pCZNDda2shb91Zo" 
+    cloud_name="dpzieo3br",
+    api_key="635949311695115",
+    api_secret="9AEbYrcVSayVhRKl5qSGGmZ2I2I"
 )
+
